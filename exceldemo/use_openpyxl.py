@@ -14,10 +14,19 @@ def create_xlsx(file_path):
     wb = Workbook()
     ws = wb.active
     ws['A1'] = 42
-    ws['B1'] = 'This is the meaning.'
+    ws['B1'] = 'Days'
     ws.append([1, 2, 3, 4])
+    ws.append([5, 6, 7, 8])
     ws['A2'] = datetime.datetime.now()
     wb.save(file_path)
+
+
+def read_xlsx(file_path):
+    """
+    Read data from excel.
+    """
+    if not os.path.exists(file_path):
+        return
 
 
 if __name__ == '__main__':
