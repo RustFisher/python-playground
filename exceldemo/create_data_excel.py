@@ -1,3 +1,5 @@
+import os
+
 from openpyxl import Workbook
 
 
@@ -21,4 +23,6 @@ def create_excel_demo(file_path):
 
 
 if __name__ == '__main__':
+    if not os.path.exists('out'):
+        os.mkdir('out')
     create_excel_demo('out/指数.xlsx')
