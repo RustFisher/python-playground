@@ -18,13 +18,17 @@ def read_xlsx_basic(file_path):
         print()
 
 
-def change_cell_format(file_path):
+def change_title_line_format(file_path):
     wb = load_workbook(file_path)
     st = wb.active
+
+    # 调整宽度
+    for col in range(ord('A'), ord('G') + 1):
+        st.column_dimensions[chr(col)].width = 15
+
     # 调整第一行的单元格
     for col in range(1, st.max_column + 1):
         cell = st.cell(row=1, column=col)
-
         font = copy(cell.font)  # 调整字体
         font.size = 13
         font.bold = True
@@ -40,4 +44,4 @@ if __name__ == '__main__':
     else:
         print('读取基本数据')
         read_xlsx_basic(excel_path)
-        change_cell_format(excel_path)
+        change_title_line_format(excel_path)
