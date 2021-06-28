@@ -59,6 +59,8 @@ https://www.an.rustfisher.com/android/fragment/dialogFragment/custom_width_heigh
 https://www.an.rustfisher.com/android/fragment/dialogFragment/df-dialog-height-changed
 https://www.an.rustfisher.com/android/broadcast/intro_use
 https://www.an.rustfisher.com/android/broadcast/screen-on-broadcast
+https://www.an.rustfisher.com/android/service/service-intro
+https://www.an.rustfisher.com/android/service/start/background-service
 https://www.an.rustfisher.com/android/service/IntentService-intro1
 https://www.an.rustfisher.com/android/handler/Handler_src_note
 https://www.an.rustfisher.com/android/handler/Handler_HandlerThread
