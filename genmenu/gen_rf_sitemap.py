@@ -15,6 +15,8 @@ def gen_sitemap(md_file):
             if len(cur_urls) > 0:
                 if cur_urls[0] == '/':
                     continue
+                if cur_urls[0].endswith('htm'):
+                    continue
                 res.append(cur_urls[0])
 
     return res
