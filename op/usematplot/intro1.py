@@ -96,10 +96,40 @@ def demo_spine():
         cur_ax.set_xlabel('x')
         cur_ax.set_ylabel('y = sin(x)')
 
+    ax1.spines.right.set_visible(False)
+    ax1.spines.top.set_visible(False)
+
+    ax2.spines.bottom.set_visible(False)
+    ax2.spines.left.set_visible(False)
+    ax2.yaxis.set_ticks_position('right')
+    ax2.xaxis.set_ticks_position('top')
+
+    ax3.spines.left.set_bounds(-0.5, 0.5)
+    ax3.spines.top.set_bounds(340, 400)
+    ax3.spines.bottom.set_linewidth(2)
+
     fig.tight_layout()
+    plt.show()
+
+
+def demo_line():
+    x_list = []
+    y_list = []
+    y2_list = []
+    y3_list = []
+    for i in range(0, 20):
+        x_list.append(i)
+        y_list.append(math.sin(i) * 2 - 4)
+        y2_list.append(math.sin(i) * 2)
+        y3_list.append(math.cos(i) * 1.3 + 3)
+    plt.plot(x_list, y_list, color='blue', linestyle='-.', linewidth=2, markersize=4)
+    plt.plot(x_list, y2_list, 'go', linewidth=1)
+    plt.plot(x_list, y3_list, 'r+')
+    plt.legend(['math.sin(i) * 2 - 4', 'math.sin(i) * 2', 'math.cos(i) * 1.3 + 3'], bbox_to_anchor=(1, 1),
+               bbox_transform=plt.gcf().transFigure)
     plt.show()
 
 
 if __name__ == '__main__':
     print('rustfisher 图表讲解')
-    demo_spine()
+    demo_line()
